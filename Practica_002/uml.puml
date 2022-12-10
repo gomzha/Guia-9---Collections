@@ -1,0 +1,24 @@
+@startuml
+class Entidad.Equipo {
+- ArrayList<Jugador> jugador
++ ArrayList<Jugador> getJugador()
++ void setJugador(ArrayList<Jugador>)
++ String toString()
+}
+class Entidad.Jugador {
+- String nom
+- int num
++ String getNom()
++ void setNom(String)
++ String getApe()
++ void setApe(String)
++ String getPos()
++ void setPos(String)
++ int getNum()
++ void setNum(int)
++ String toString()
+}
+class Main {
++ {static} void main(String[])
+}
+@enduml

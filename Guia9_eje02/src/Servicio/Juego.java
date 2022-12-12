@@ -17,8 +17,8 @@ public class Juego {
     }
 
     private void llenarJuego(ArrayList<Jugador> jugadorArrayList, Revolver revolver) {
-        jugadorArrayList = new ArrayList<>();
-        revolver = new Revolver();
+        this.jugadorArrayList = new ArrayList<>();
+        this.revolver = new Revolver();
         int cantJug;
         String nombre;
         System.out.println("Cuantos jugadores desea jugar, si coloca mayor a 6, por defecto será 6:");
@@ -33,14 +33,17 @@ public class Juego {
         for (int i = 0; i < cantJug; i++) {
             System.out.println("Ingrese el nombre del jugador N°" + (i + 1) + ": ");
             nombre = leer.next();
-            jugadorArrayList.add(new Jugador((i + 1), nombre));
+            this.jugadorArrayList.add(new Jugador((i + 1), nombre));
         }
 
-        ronda(jugadorArrayList, revolver);
+        ronda();
+
     }
 
-    private void ronda(ArrayList<Jugador> jugadorArrayList, Revolver revolver) {
-        int numJug = 0;
+    //private void ronda(ArrayList<Jugador> jugadorArrayList, Revolver revolver) {
+        private void ronda() {
+
+            int numJug = 0;
         int maxJug = jugadorArrayList.size();
         boolean seguirJugando = true;
 
